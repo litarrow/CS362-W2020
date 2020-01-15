@@ -8,7 +8,7 @@ import Dominion
 import testUtility
 
 #Get player names
-player_names = testUtility.getPlayer_names()
+player_names = testUtility.getPlayer_namesBug()
 
 #number of curses and victory cards
 if len(player_names)>2:

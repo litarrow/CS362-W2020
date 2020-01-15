@@ -20,7 +20,7 @@ nC = -10 + 10 * len(player_names)
 #initialize and fill containers
 box = testUtility.getBoxes(nV)
 supply_order = testUtility.getSupply_order()
-supply = testUtility.getSupply(box, player_names, nV, nC)
+supply = testUtility.getSupplyBug(box, player_names, nV, nC)
 players = testUtility.getPlayers(player_names)
 trash = []
 
