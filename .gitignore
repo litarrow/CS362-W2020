@@ -130,3 +130,5 @@ dmypy.json
 projects/ohsa/dominion/.vs/dominion/v16/.suo
 projects/ohsa/dominion/dominion.pyproj
 projects/ohsa/dominion/dominion.sln
+*.pyproj
+*.sln
