@@ -6,11 +6,6 @@ def getPlayer_names():
 	return ["Annie","*Ben","*Carla"]
 
 
-def getPlayer_namesBug():
-	# bug in "*Annie", instead of "Annie"
-	return ["*Annie","*Ben","*Carla"]
-
-
 def getBoxes(nV):
 	#Define box
 	box = {}
@@ -72,7 +67,26 @@ def getSupply(box, player_names, nV, nC):
 	return supply
 
 
-def getSupplyBug(box, player_names, nV, nC):
+def getSupplyBug1(box, player_names, nV, nC):
+	#Pick 10 cards from box to be in the supply.
+	boxlist = [k for k in box]
+	# bug is no shuffling
+	random10 = boxlist[:10]
+	supply = defaultdict(list,[(k,box[k]) for k in random10])
+
+	#The supply always has these cards
+	supply["Copper"]=[Dominion.Copper()]*(60-len(player_names)*7)
+	supply["Silver"]=[Dominion.Silver()]*40
+	supply["Gold"]=[Dominion.Gold()]*30
+	supply["Estate"]=[Dominion.Estate()]*nV
+	supply["Duchy"]=[Dominion.Duchy()]*nV
+	supply["Province"]=[Dominion.Province()]*nV
+	supply["Curse"]=[Dominion.Curse()]*nC
+
+	return supply
+
+
+def getSupplyBug2(box, player_names, nV, nC):
 	#Pick 10 cards from box to be in the supply.
 	boxlist = [k for k in box]
 	random.shuffle(boxlist)

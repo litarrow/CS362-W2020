@@ -8,7 +8,7 @@ import Dominion
 import testUtility
 
 #Get player names
-player_names = testUtility.getPlayer_namesBug()
+player_names = testUtility.getPlayer_names()
 
 #number of curses and victory cards
 if len(player_names)>2:
@@ -20,7 +20,7 @@ nC = -10 + 10 * len(player_names)
 #initialize and fill containers
 box = testUtility.getBoxes(nV)
 supply_order = testUtility.getSupply_order()
-supply = testUtility.getSupply(box, player_names, nV, nC)
+supply = testUtility.getSupplyBug2(box, player_names, nV, nC)
 players = testUtility.getPlayers(player_names)
 trash = []
 
