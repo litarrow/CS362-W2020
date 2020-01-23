@@ -133,3 +133,4 @@ projects/ohsa/dominion/dominion.sln
 *.pyproj
 *.sln
 *.testlog
+*.ini
