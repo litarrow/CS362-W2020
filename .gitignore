@@ -132,3 +132,4 @@ projects/ohsa/dominion/dominion.pyproj
 projects/ohsa/dominion/dominion.sln
 *.pyproj
 *.sln
+*.testlog
