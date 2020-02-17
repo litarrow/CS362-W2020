@@ -134,3 +134,6 @@ projects/ohsa/dominion/dominion.sln
 *.sln
 *.testlog
 *.ini
+*.xml
+*.iml
+*.zip
